@@ -1,0 +1,20 @@
+extends layout 
+block content 
+    h1#header #{title}: #{type.type}
+    if type_recipes.length 
+        p #[strong Delete the following recipes before attempting to delete this type]
+
+        div 
+            h4 Recipes 
+
+            dl 
+            each recipe in type_recipes 
+                dt 
+                    a(href=recipe.url) #{recipe.name}
+    else 
+        p Delete this type?
+
+        form(method = 'POST' action = '')
+            .form-group 
+                input#typeid.form-control(type='hidden',name='typeid', required = 'true', value= type._id)
+            button(type='submit') Delete

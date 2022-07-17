@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class = 'container-fluid')
+      nav(class='navbar')
+        a.logo(href='/') Cookout
+        ul(class = 'nav-buttons')
+          li
+           a(href = '/recipes') Recipes
+          li 
+            a(href = '/types') Types
+          li 
+            a(href = '/creators') Creators
+  
+        block navbar 
+      block content

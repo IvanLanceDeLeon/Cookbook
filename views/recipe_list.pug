@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .recipe-list 
+        h1#header All Recipes
+        a(href='/createRecipe')                
+            button.button-38 Create Recipe     
+
+    .recipe-container 
+        each recipe in recipe_list 
+            .recipe-card
+                a(href = recipe.url) 
+                    h3 #{recipe.name}
+                p #{recipe.description.substr(0,90)} ...
+                p 
+                    a(href= recipe.creator.url) #{recipe.creator.first_name} #{recipe.creator.last_name}
+
+

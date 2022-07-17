@@ -1,0 +1,19 @@
+extends layout 
+block content
+    h1#header #{creator.name}
+    .type-buttons           
+        a(href="/creators/" + creator._id + "/delete")
+            button.button-38 Delete
+        a(href="/creators/" + creator._id + "/update")
+            button.button-38 Update
+    .recipe-container 
+        each recipe in creator_recipes
+            .recipe-card
+                a(href = recipe.url) 
+                    h3 #{recipe.name}
+                p #{recipe.description.substr(0,90)} ...
+                p 
+                    a(href= recipe.creator.url) #{recipe.creator.first_name} #{recipe.creator.last_name}             
+
+
+    

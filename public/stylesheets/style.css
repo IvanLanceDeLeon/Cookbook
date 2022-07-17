@@ -1,0 +1,433 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  background-image: linear-gradient(#f8fcfc, #b2dff0);
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  color: #e2f2f8;
+  font-size: 3rem;
+  margin-left: 25px;
+}
+.navbar a {
+  color: #e2f2f8;
+  text-decoration: none;
+}
+.navbar li {
+  font-size: 1.2rem;
+  margin: 0px;
+}
+
+.form-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgbargba(40, 152, 222, 0.51);
+  background: rgb(125, 179, 198);
+  border: #c3b2c8;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-style: dashed;
+  box-shadow: 12px 12px 2px 1px #c2d3e1;
+  border-radius: 5%;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  mix-blend-mode: darken;
+  opacity: 50%;
+}
+
+.navbar {
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px;
+  margin: 0px;
+  background-color: #4dbf85;
+  min-height: 10vh;
+}
+
+.nav-buttons {
+  border-left: double white;
+  margin-left: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  font-size: 1.25rem;
+}
+
+.nav-buttons li {
+  margin: 25px;
+  font-size: 1.953rem;
+}
+
+.dish-type-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.recipe-list,
+.type-list,
+.creator-list {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+/* .recipe-form{
+  height:100vh;
+} */
+.recipe-container,
+.type-container,
+.creator-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  min-height: 100vh;
+}
+
+#name {
+  width: 40vw;
+  height: 5vh;
+}
+
+textarea {
+  width: 40vw;
+  height: 15vh;
+}
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 10px;
+  color: #334a52;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  font-size: 2rem;
+  margin: 1px;
+}
+.types-label {
+  font-size: 1.2rem;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.type-selections {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.creator-container {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.type-container {
+  font-size: 2rem;
+}
+
+.selections a {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 10px;
+}
+.selections a:link,
+.type-selections a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #4dbf85;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.selections a:hover,
+.elections a:active {
+  background-color: #4dbf85;
+  color: white;
+}
+.type-container ul,
+.creator-container ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.recipe-card {
+  background-color: #fff;
+  color: black;
+  width: 300px;
+  height: 180px;
+  border: solid 0.25px black;
+  box-shadow: 5px 5px 5px black;
+  margin-left: 50px;
+  margin-top: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.recipe-card a {
+  color: black;
+}
+
+.recipe-card h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.recipe-card p {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.explore-button {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.explore-button li {
+  margin-left: 20px;
+}
+
+ul {
+  padding: 0px;
+}
+
+p {
+  white-space: pre-line;
+}
+
+.index-container {
+  background-image: url("../images/home-bg.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.index-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 50%;
+  height: 100%;
+  margin: 0px auto;
+  top: 50%;
+  z-index: 999;
+}
+
+.index-info h1 {
+  font-size: 3rem;
+  margin: 0px 10px 10px 10px;
+}
+.index-info h2 {
+  font-size: 2.75rem;
+  margin: 0px 10px 10px 10px;
+}
+
+.index-info p {
+  font-size: 1.563rem;
+  margin: 0px 10px 10px 10px;
+}
+
+.index-info button {
+  background-color: #2e2d2b; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 10px 10px 10px;
+}
+.content {
+  width: 50%;
+  line-height: 1.6rem;
+  margin: 0px auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.content p {
+  font-size: 1.25rem;
+}
+.content p,
+h1,
+h2 {
+  margin: 10px;
+}
+.type h4,
+.type li {
+  margin: 10px;
+}
+#header {
+  text-align: center;
+  color: #334a52;
+}
+.content h4 {
+  font-size: 1.5rem;
+}
+.type ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.ingredients,
+.instructions,
+.type {
+  border: double black;
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+}
+
+.ingredients h4,
+.instructions h4 {
+  margin: 10px;
+}
+
+.ingredients p {
+  font-size: 1.25rem;
+}
+
+.instructions p {
+  font-size: 1.25rem;
+}
+
+.type li {
+  font-size: 1.25rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  margin: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.creator-detail-container {
+  height: 100vh;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.creator-detail-container li {
+  list-style-type: none;
+}
+.creator-detail-container a {
+  text-decoration: none;
+}
+
+.type-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #2d3a3f;
+}
+
+#creator {
+  width: 40vw;
+  height: 5vh;
+  color: #334a52;
+  background-color: white;
+}
+
+.recipe-form-button {
+  margin: 20px;
+}
+/* CSS */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.button-38 {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}

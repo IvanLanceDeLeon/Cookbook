@@ -1,0 +1,14 @@
+extends layout 
+block content
+    .type-list
+        h1#header= title
+        a(href='/types/create')                
+            button.button-38 New Type     
+    .type-container
+        ul 
+            each type in type_list 
+                li.selections 
+                    a(href = "/types/" + type._id) #{type.type} 
+
+
+        

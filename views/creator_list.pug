@@ -1,0 +1,14 @@
+extends layout 
+block content
+    .creator-list
+        h1#header= title
+        a(href="/creators/create")
+            button.button-38 New Creator
+    .creator-container
+        ul 
+            each creator in list_creators 
+                li.selections 
+                    a(href = "/creators/" + creator._id) #{creator.name}
+
+
+    

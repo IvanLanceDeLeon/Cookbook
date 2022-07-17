@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1#header= title 
+
+    p Do you really want to delete this #{recipe.name} Recipe?
+
+    form(method='POST' action='')
+      div.form-group
+        input#recipeid.form-control(type='hidden',name='recipeid', required='true', value=recipe._id )
+
+      button.btn.btn-primary(type='submit') Delete

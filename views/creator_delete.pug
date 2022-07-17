@@ -1,0 +1,20 @@
+extends layout 
+block content
+    h1#header= title
+    if creator_recipes.length 
+      p #[strong Delete the following before deleting this creator]
+
+      div 
+        h4 Recipes 
+        dl 
+        each recipe in creator_recipes 
+          dt 
+            a(href=recipe.url) #{recipe.name}
+    else
+      p Do you really want to delete this Author?
+      
+      form(method='POST' action='')
+        div.form-group
+          input#creatorid.form-control(type='hidden',name='creatorid', required='true', value=creator._id )
+
+        button.btn.btn-primary(type='submit') Delete    

@@ -1,0 +1,25 @@
+extends layout 
+
+block content
+
+    .content
+        h1 #{recipe.name}
+        h2 By #{recipe.creator.name}
+        p #{recipe.description}
+            .ingredients
+                h4 Ingredients 
+                p #{recipe.ingredients}
+            .instructions 
+                h4 Instructions 
+                p #{recipe.instructions}
+            .type 
+                h4 Type
+                ul 
+                    each type in recipe.type 
+                        li
+                            a(href = type.url) #{type.type}
+        .buttons
+            a(href="/recipes/" + recipe._id + "/delete")
+                button.button-38 Delete Recipe
+            a(href="/recipes/" + recipe._id + "/update")
+                button.button-38 Update Recipe

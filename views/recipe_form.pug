@@ -1,0 +1,63 @@
+
+head 
+  link(rel='stylesheet' href='/stylesheets/style.css')
+div
+  nav(class='navbar')
+    a.logo(href='/') Cookout
+    ul(class = 'nav-buttons')
+      li
+        a(href = '/recipes') Recipes
+      li 
+        a(href = '/types') Types
+      li 
+        a(href = '/creators') Creators
+
+.recipe-form
+  .form-container
+    h1.form-header New Recipe
+    form(method = 'POST' action = '')
+      div.form-group
+        select#creator.form-control(type='select' placeholder='Select creator' name='creator' required='true' )
+          - creators.sort(function(a, b) {let textA = a.last_name.toUpperCase(); let textB = b.last_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+          for creator in creators
+            if recipe
+              //- Handle GET form, where book.author is an object, and POST form, where it is a string.
+              option(
+                value=creator._id
+                selected=(
+                  creator._id.toString()==recipe.creator._id
+                  || creator._id.toString()==recipe.creator
+                ) ? 'selected' : false
+              ) #{creator.name}
+            else
+              option(value=creator._id) #{creator.name}
+        div.form-group
+          //- label(for='name') Name:
+          input#name.form-control(type='text' placeholder='Name of Recipe' name='name' required='true' value=(undefined===recipe ? '' : recipe.name) )
+        div.form-group
+          //- label(for='description') Description:
+          textarea#description.form-control(type='textarea' placeholder='Describe your recipe' name='description' required='true') #{undefined===recipe ? '' : recipe.description}
+        div.form-group
+          //- label(for='instructions') Instructions:
+          textarea#instructions.form-control(type='textarea' placeholder='How do we make it ?' name='instructions' required='true') #{undefined===recipe ? '' : recipe.instructions}
+        div.form-group
+          //- label(for='ingredients') Ingredients:
+          textarea#ingredients.form-control(type='textarea' placeholder='What do we need?' name='ingredients' required='true') #{undefined===recipe ? '' : recipe.ingredients}
+        div.form-group
+          label(for = "type") What kind of dish is it ?
+          div
+            for t in type
+              div(style='display: inline; padding-right:10px;')
+                input.checkbox-input(type='checkbox' name='type', id=t._id, value=t._id, checked=t.checked )
+                label.types-label(for=t._id) #{t.type}
+        //- a(href = "/types/create") 
+        //-   button.button-38 Submit a new Type
+
+        //- a(href = "/newCreator")
+        //-     button.button-38 Add a new Creator   
+      div.recipe-form-button
+        button.button-38(type='submit') Submit
+      if errors
+        ul
+        for error in errors
+          li!= error.msg
